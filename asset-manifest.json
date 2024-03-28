@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WebDA4-GameWebsite/static/css/main.f855e6bc.css",
+    "main.js": "/WebDA4-GameWebsite/static/js/main.7732be1b.js",
+    "static/js/453.49b0c0c9.chunk.js": "/WebDA4-GameWebsite/static/js/453.49b0c0c9.chunk.js",
+    "static/media/logo.svg": "/WebDA4-GameWebsite/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/WebDA4-GameWebsite/index.html",
+    "main.f855e6bc.css.map": "/WebDA4-GameWebsite/static/css/main.f855e6bc.css.map",
+    "main.7732be1b.js.map": "/WebDA4-GameWebsite/static/js/main.7732be1b.js.map",
+    "453.49b0c0c9.chunk.js.map": "/WebDA4-GameWebsite/static/js/453.49b0c0c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.7732be1b.js"
+  ]
+}
