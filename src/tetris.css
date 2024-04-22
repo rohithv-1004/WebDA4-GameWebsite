@@ -1,7 +1,3 @@
-h1{
-  font-size: 500%;
-}
-
 :root {
   --clr-neon-pink: hsl(317 100% 54%);
   --clr-neon-green:hsl(136, 100%, 53%);
@@ -9,115 +5,6 @@ h1{
   --clr-neon-yellow: rgb(207,255,4);
   --clr-bg: rgb(8, 5, 54);
 }
-body{
-  overflow: hidden;
-  height: 100vh;
-  background-image: linear-gradient(to top, rgb(1, 4, 60),rgb(18, 12, 66),rgb(23, 28, 67)) ;
-  animation: textShadow 1.6s infinite;
-}
-a{
-  display: flex;
-  justify-content: center;
-}
-.grid-for-alignment{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows:1fr;
-  justify-content: center;
-}
-.div-for-button{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  justify-content: center;
-}
-.text-align{
-  display: grid;
-  justify-content: center;
-}
-.buttons{
-  cursor: pointer;
-  margin-bottom: 10%;
-  margin-top:10%;
-  background-color: var(--clr-bg);
-  text-decoration: none;
-  font-size: 25px;
-  text-decoration: none;
-}
-#tetris{
-  color: var(--clr-neon-pink);
-  border: var(--clr-neon-pink) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor; 
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #bc13fe,
-  0 0 0.8rem #bc13fe,
-  0 0 2.8rem #bc13fe,
-  inset 0 0 1.3rem #bc13fe; 
-}
-#tetris:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-pink));
-  animation: flicker 0.15s infinite;
-}
-#wordle{
-  color: var(--clr-neon-green);
-  border: var(--clr-neon-green) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #13fe3a,
-  0 0 0.8rem #13fe3a,
-  0 0 2.8rem #13fe3a,
-  inset 0 0 1.3rem #13fe3a; 
-}
-#wordle:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-green));
-  animation: flicker 0.15s infinite;
-}
-#snake{
-  color: var(--clr-neon-orange);
-  border: var(--clr-neon-orange) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #fe8c13,
-  0 0 0.8rem #fe8c13,
-  0 0 2.8rem #fe8c13,
-  inset 0 0 1.3rem #fe8c13; 
-}
-#snake:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-orange));
-  animation: flicker 0.15s infinite;
-
-}
-#rps{
-  color: var(--clr-neon-yellow);
-  border: var(--clr-neon-yellow) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #feea13,
-  0 0 0.8rem #feea13,
-  0 0 2.8rem #feea13,
-  inset 0 0 1.3rem #feea13; 
-}
-#rps:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-yellow));
-  animation: flicker 0.15s infinite;
-}
-
-.neon-text {
-      animation: flicker-1 0.5s infinite alternate; 
-      color:#fff;
-}
-
 @keyframes flicker-1 {
     
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
@@ -295,6 +182,97 @@ body::before {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
-audio{
-  visibility: hidden;
-}
+body {
+    overflow: hidden;
+    background: var(--clr-bg);
+    display: flex;
+    justify-content: center;
+  }
+  #tetris {
+    width: 360px;
+    border: 1px solid #fff;
+    padding: 20px;
+    margin-top: 10rem;
+  }
+  #canvas {
+    width: 200px;
+    height: 440px;
+    background-color: #000;
+    position: relative;
+    color: #fff;
+    border: #fff;
+  
+  }
+  #canvas h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 200px;
+  }
+  .piece {
+    border: 1px solid white;
+    position: absolute;
+  }
+  
+  #start{
+    animation: blink .7s steps(2, start) infinite;
+    background: #E1FF5F;
+    border-radius: 2px;
+    color: #202020;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  
+  @keyframes blink {
+    to {
+      outline: #E1FF5F solid 1px;
+    }
+  }
+  
+  .red{
+    color: #f00000;
+  }
+  
+  .square {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 1px solid white;
+  }
+  .type0 {
+    background-color: #a000f0;
+  }
+  .type1 {
+    background-color: #00f0f0;
+  }
+  .type2 {
+    background-color: #f0a000;
+  }
+  .type3 {
+    background-color: #0000f0;
+  }
+  .type4 {
+    background-color: #00f000;
+  }
+  .type5 {
+    background-color: #f00000;
+  }
+  .type6 {
+    background-color: #f0f000;
+  }
+  #next_shape {
+    position: relative;
+    background-color: #000;
+    border: 1px solid white;
+    width: 110px;
+    height: 110px;
+  }
+  #info {
+    background-color: #000;
+    color: #fff;
+    float: right;
+    width: 110px;
+    height: 420px;
+    padding: 10px;
+  }

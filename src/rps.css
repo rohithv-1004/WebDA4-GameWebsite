@@ -1,143 +1,143 @@
-h1{
-  font-size: 500%;
-}
-
 :root {
   --clr-neon-pink: hsl(317 100% 54%);
   --clr-neon-green:hsl(136, 100%, 53%);
   --clr-neon-orange:hsl(11, 80%, 60%);
   --clr-neon-yellow: rgb(207,255,4);
-  --clr-bg: rgb(8, 5, 54);
+    --clr-bg: rgb(8, 5, 54);
 }
+
 body{
-  overflow: hidden;
-  height: 100vh;
-  background-image: linear-gradient(to top, rgb(1, 4, 60),rgb(18, 12, 66),rgb(23, 28, 67)) ;
-  animation: textShadow 1.6s infinite;
-}
-a{
-  display: flex;
-  justify-content: center;
-}
-.grid-for-alignment{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows:1fr;
-  justify-content: center;
-}
-.div-for-button{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  justify-content: center;
-}
-.text-align{
-  display: grid;
-  justify-content: center;
-}
-.buttons{
-  cursor: pointer;
-  margin-bottom: 10%;
-  margin-top:10%;
+  text-align: center;
   background-color: var(--clr-bg);
-  text-decoration: none;
-  font-size: 25px;
-  text-decoration: none;
+  animation: textShadow 1.6s infinite;
+  overflow: hidden;
 }
-#tetris{
-  color: var(--clr-neon-pink);
-  border: var(--clr-neon-pink) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor; 
+
+header{
+  font-size: xxx-large;
+  color: white;
+  animation: flicker-1 0.5s infinite alternate;
+}
+
+#game-space{
+  color: white;
+  height: 85vh;
+}
+.hand{
+  display: inline-block;
+  font-size: 10rem;
+  animation: wiggle-left 1s infinite;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+}
+.text{
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  animation: flicker-1 0.5s infinite alternate;
+}
+.text-1{
+  display: inline;
+  font-size: 3rem;
+  animation: flicker-1 0.5s infinite alternate;
+}
+.text-2{
+  font-size: 4rem;
+  animation: flicker-1 0.5s infinite alternate;
+}
+button{
+  
+  border-width:10px;
+  border:var(--clr-neon-pink) 0.125em solid ;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  background-color: white;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+}
+button:hover{
+  animation: flicker 0.5s infinite alternate;
+}
+#score-box{
+  display: inline-block;
+  border:var(--clr-neon-pink) 0.5em solid;
+  border-radius: 1em;
+  width: 10rem;
   box-shadow: 0 0 .2rem #fff,
   0 0 .2rem #fff,
   0 0 2rem #bc13fe,
   0 0 0.8rem #bc13fe,
   0 0 2.8rem #bc13fe,
   inset 0 0 1.3rem #bc13fe; 
-}
-#tetris:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-pink));
-  animation: flicker 0.15s infinite;
-}
-#wordle{
-  color: var(--clr-neon-green);
-  border: var(--clr-neon-green) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #13fe3a,
-  0 0 0.8rem #13fe3a,
-  0 0 2.8rem #13fe3a,
-  inset 0 0 1.3rem #13fe3a; 
-}
-#wordle:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-green));
-  animation: flicker 0.15s infinite;
-}
-#snake{
-  color: var(--clr-neon-orange);
-  border: var(--clr-neon-orange) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #fe8c13,
-  0 0 0.8rem #fe8c13,
-  0 0 2.8rem #fe8c13,
-  inset 0 0 1.3rem #fe8c13; 
-}
-#snake:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-orange));
-  animation: flicker 0.15s infinite;
-
-}
-#rps{
-  color: var(--clr-neon-yellow);
-  border: var(--clr-neon-yellow) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 2rem #feea13,
-  0 0 0.8rem #feea13,
-  0 0 2.8rem #feea13,
-  inset 0 0 1.3rem #feea13; 
-}
-#rps:hover{
-  filter: drop-shadow(0px 2px 5px var(--clr-neon-yellow));
-  animation: flicker 0.15s infinite;
-}
-
-.neon-text {
-      animation: flicker-1 0.5s infinite alternate; 
-      color:#fff;
-}
-
-@keyframes flicker-1 {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 2px #fff,
-      0 0 5.5px #fff,
-      0 0 9.5px #fff,
-      0 0 20px #0fa,
-      0 0 40px #0fa,
-      0 0 45px #0fa,
-      0 0 25px #0fa,
-      0 0 50px #0fa;
   
+}
+.text-3{
+  display: inline-block;
+  font-size:2rem;
+  padding: 0px;
+  margin-left: 20px ;
+  animation: flicker-1 0.5s infinite alternate;
+
+}
+.choice{
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 20px;
+  animation: flicker-1 0.5s infinite alternate;
+
+}
+#result{
+  margin: none;
+  font-size: 2rem;
+  animation: flicker-1 0.5s infinite alternate;
+
+} 
+#btn-rock{
+  font-size: 7rem;
+}
+#btn-paper{
+  font-size: 7rem;
+}
+#btn-scisscor{
+  font-size: 7rem;
+}
+#home-button{
+  translate: -45rem 0;
+  height: 4rem;
+}
+
+@keyframes wiggle-left{
+  0%{
+    rotate: 5deg;
+  }
+  50%{
+   rotate: -5deg;
+  }
+  100%{
+    rotate: 5deg;
   }
   
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
 }
+
 @keyframes flicker {
   0% {
     opacity: 0.27861;
@@ -268,6 +268,26 @@ a{
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
+@keyframes flicker-1 {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 2px #fff,
+      0 0 5.5px #fff,
+      0 0 9.5px #fff,
+      0 0 20px #0fa,
+      0 0 40px #0fa,
+      0 0 45px #0fa,
+      0 0 25px #0fa,
+      0 0 50px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
 body::after {
   content: " ";
   display: block;
@@ -294,7 +314,4 @@ body::before {
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-}
-audio{
-  visibility: hidden;
 }
