@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-  const htmlContent = '
+  const htmlContent = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -28,7 +28,7 @@ const App = () => {
       </div>
     </body>
     </html>
-  ';
+  `;
 
   return (
     <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
