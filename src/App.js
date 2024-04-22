@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+const App = () => {
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Game-Time</title>
+      <link rel="stylesheet" href="./styles/index.css">
+    </head>
+    <body>
+      <div class="grid-for-alignment">
+        <div class="left-side-design"><p></p></div>
+        <div class="middle-stuff">
+          <div class="text-align">
+            <h1 class="neon-text">Game Time</h1>
+          </div>
+          <div class="div-for-button">
+            <a href="tetris.html"><button class="buttons" id="tetris">Tetris</button></a>
+            <a href="wordle.html"><button class="buttons" id="wordle">Wordle</button></a> 
+            <a href="snake.html"><button class="buttons" id="snake">Snake</button></a> 
+            <a href="rps.html"><button class="buttons" id="rps">Rock paper scissors</button></a>
+          </div>
+        </div>
+        <div class="right-side-design"><p></p></div>
+      </div>
+    </body>
+    </html>
+  `;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
   );
-}
+};
 
 export default App;
