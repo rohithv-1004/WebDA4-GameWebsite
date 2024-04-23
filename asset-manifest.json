@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/WebDA4-GameWebsite/static/js/main.8bdc6c01.js",
+    "main.js": "/WebDA4-GameWebsite/static/js/main.ff24d338.js",
     "index.html": "/WebDA4-GameWebsite/index.html",
-    "main.8bdc6c01.js.map": "/WebDA4-GameWebsite/static/js/main.8bdc6c01.js.map"
+    "main.ff24d338.js.map": "/WebDA4-GameWebsite/static/js/main.ff24d338.js.map"
   },
   "entrypoints": [
-    "static/js/main.8bdc6c01.js"
+    "static/js/main.ff24d338.js"
   ]
 }
