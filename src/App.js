@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import IframeComponent from './IframeComponent';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <iframe src={`${process.env.PUBLIC_URL}/index.html`} title="External Content" width="100%" height="600px"></iframe>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div>
+      <h1>Your React App</h1>
+      <IframeComponent />
+    </div>
+  );
 }
 
 export default App;
